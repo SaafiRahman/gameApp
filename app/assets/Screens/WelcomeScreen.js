@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableWithoutFeedback, TouchableOpacity, Button, Alert, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableHighlight, Button, Alert, ImageBackground } from 'react-native';
 
 
 function WelcomeScreen(props) {
@@ -7,9 +7,20 @@ function WelcomeScreen(props) {
             <View style={styles.container}>
               <ImageBackground source={{
                 uri: 'https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg'}} style={styles.background}>
+                  
                 <Image style={styles.logo} source={require("../../assets/mlady.jpg")} />
-                <View style={styles.loginpanel}/>
-                <View style={styles.registerpanel}/>
+
+                <TouchableHighlight style={styles.loginpanel}>
+                  <View>
+                    <Text style={styles.welcomeText}>Login</Text>
+                  </View> 
+                </TouchableHighlight>
+
+                <TouchableHighlight  style={styles.registerpanel}>
+                  <View>
+                    <Text style={styles.welcomeText}>Register</Text>
+                  </View>
+                </TouchableHighlight>
               </ImageBackground>
             </View>
     );
@@ -28,13 +39,17 @@ const styles = StyleSheet.create({
     loginpanel: {
       width: "100%",
       height: 70,
-      backgroundColor: 'red'
+      backgroundColor: 'red',
+      justifyContent: 'center',
+      alignItems: "center"
     },
 
     registerpanel: {
         width: "100%",
         height: 70,
-        backgroundColor: 'orange'
+        backgroundColor: 'orange',
+        justifyContent: 'center',
+        alignItems: "center"
       },
 
       logo: {
@@ -42,6 +57,10 @@ const styles = StyleSheet.create({
         height: 100,
         position: 'absolute',
         top: 100
+      },
+
+      welcomeText: {
+        fontSize: 30
       }
   });
 
