@@ -1,22 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableHighlight, Button, Alert, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableHighlight, ImageBackground } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
-function WelcomeScreen(props) {
+function WelcomeScreen({ navigation }) {
     return (
             <View style={styles.container}>
               <ImageBackground source={{
-                uri: 'https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg'}} style={styles.background}>
-                  
-                <Image style={styles.logo} source={require("../../assets/mlady.jpg")} />
+                uri: 'https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg'}} style={styles.background} blurRadius={8}>
 
-                <TouchableHighlight style={styles.loginpanel}>
+                <View style={styles.fulllogo}> 
+                  <Image style={styles.logo} source={require("../../assets/mlady.jpg")} />
+                  <Text>Insert Title</Text>
+                </View>
+
+                <TouchableHighlight underlayColor={'#AA0505'} style={styles.loginpanel} onPress={() => navigation.navigate('loginscreen')}>
                   <View>
                     <Text style={styles.welcomeText}>Login</Text>
                   </View> 
                 </TouchableHighlight>
 
-                <TouchableHighlight  style={styles.registerpanel}>
+                <TouchableHighlight underlayColor={'#C15F12'} style={styles.registerpanel} onPress={() => navigation.navigate('registerscreen')}>
                   <View>
                     <Text style={styles.welcomeText}>Register</Text>
                   </View>
@@ -55,13 +60,17 @@ const styles = StyleSheet.create({
       logo: {
         width: 100,
         height: 100,
-        position: 'absolute',
-        fadeDuration: 300,
-        top: 100
+        
       },
 
       welcomeText: {
         fontSize: 30
+      },
+
+      fulllogo: {
+        alignItems: "center",
+        position: 'absolute',
+        top: 100
       }
   });
 

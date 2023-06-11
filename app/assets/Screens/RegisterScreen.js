@@ -11,7 +11,7 @@ function RegisterScreen(props) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'red',
+        backgroundColor: 'orange',
         justifyContent: 'center',
         alignItems: "center",
         flex: 1

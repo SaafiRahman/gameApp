@@ -2,12 +2,22 @@
 import WelcomeScreen from './app/assets/Screens/WelcomeScreen';
 import LoginScreen  from './app/assets/Screens/LoginScreen';
 import RegisterScreen from './app/assets/Screens/RegisterScreen';
-// import { StackNavigator } from 'react-nativation';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   
   return (
-    <WelcomeScreen />
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='welcomescreen'>
+        <Stack.Screen name="welcomescreen" component={WelcomeScreen} />
+        <Stack.Screen name="loginscreen" component={LoginScreen} />
+        <Stack.Screen name="registerscreen" component={RegisterScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
