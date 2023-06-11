@@ -8,7 +8,7 @@ function LoginScreen(props) {
         </View>
     );
 }
-//dfgdfgafdfs
+
 const styles = StyleSheet.create({
     container: {
         backgroundColor: 'red',
