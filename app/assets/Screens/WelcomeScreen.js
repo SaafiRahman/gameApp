@@ -8,7 +8,7 @@ function WelcomeScreen({ navigation }) {
     return (
             <View style={styles.container}>
               <ImageBackground source={{
-                uri: 'https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg'}} style={styles.background} blurRadius={8}>
+                uri: 'https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg'}} style={styles.background} blurRadius={6}>
 
                 <View style={styles.fulllogo}> 
                   <Image style={styles.logo} source={require("../../assets/mlady.jpg")} />
