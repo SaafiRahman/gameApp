@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableHighlight, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableHighlight, ImageBackground, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -15,13 +15,11 @@ function WelcomeScreen({ navigation }) {
                   <Text>Insert Title</Text>
                 </View>
 
-                <TouchableHighlight underlayColor={'#AA0505'} style={styles.loginpanel} onPress={() => navigation.navigate('loginscreen')}>
-                  <View>
-                    <Text style={styles.welcomeText}>Login</Text>
-                  </View> 
+                <TouchableHighlight underlayColor={'#067A6F'} style={styles.buttonstylelogin} onPress={() => navigation.navigate('loginscreen')}>
+                  <Text style={styles.welcomeText}>Login</Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight underlayColor={'#C15F12'} style={styles.registerpanel} onPress={() => navigation.navigate('registerscreen')}>
+                <TouchableHighlight underlayColor={'#A95747'} style={styles.buttonstyleregister} onPress={() => navigation.navigate('registerscreen')}>
                   <View>
                     <Text style={styles.welcomeText}>Register</Text>
                   </View>
@@ -64,13 +62,43 @@ const styles = StyleSheet.create({
       },
 
       welcomeText: {
-        fontSize: 30
+        fontSize: 18,
+        color: "#fff",
+        fontWeight: "bold",
+        alignSelf: "center",
+        textTransform: "uppercase"
       },
 
       fulllogo: {
         alignItems: "center",
         position: 'absolute',
         top: 100
+      },
+
+      buttonstylelogin: {
+        bottom: 50,
+        width: "90%",
+        height: 70,
+        elevation: 8,
+        backgroundColor: "#009688",
+        borderRadius: 50,
+        paddingVertical: 20,
+        paddingHorizontal: 20,
+        justifyContent: 'center',
+        alignItems: "center"
+      },
+
+      buttonstyleregister: {
+        bottom: 30,
+        width: "40%",
+        height: 70,
+        elevation: 8,
+        backgroundColor: "#D9735F",
+        borderRadius: 50,
+        paddingVertical: 10,
+        paddingHorizontal: 10,
+        justifyContent: 'center',
+        alignItems: "center"
       }
   });
 
