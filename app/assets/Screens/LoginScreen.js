@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ImageBackground, TextInput } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground, TextInput, TouchableHighlight } from 'react-native';
+import {AsyncStorage} from 'react-native';
 
 
 function LoginScreen(props) {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    
+
     return (
         <View style ={styles.container}>
             <ImageBackground blurRadius={6} style={styles.background} source={require('../../assets/demo-image1.png')}>
-                <View>
+                <View style={styles.formatinput}>
                     <Text style={styles.logintext}>Login: </Text>
                     <TextInput
                         style={styles.input}
@@ -24,6 +25,10 @@ function LoginScreen(props) {
                         secureTextEntry
                         onChangeText={(val) => setPassword(val)}
                     />
+
+                    <TouchableHighlight underlayColor={'#067A6F'} style={styles.buttonstylelogin}>
+                        <Text style={styles.welcomeTextlogin}>Login</Text>
+                    </TouchableHighlight>
                 </View>
             </ImageBackground>
         </View>
@@ -46,18 +51,35 @@ const styles = StyleSheet.create({
         color: "#fff",
         fontWeight: "bold",
         textTransform: "uppercase",
-        right: 100,
-        bottom: 100
+        right: 115,
+        
       },
 
       input: {
-        width: 200,
+        width: 300,
         height: 40,
         borderColor: 'gray',
         borderWidth: 1,
         marginBottom: 16,
         paddingHorizontal: 8
-}
+    },
+
+    buttonstylelogin: {
+        width: 100,
+        height: 40,
+        elevation: 8,
+        backgroundColor: "#009688",
+        borderRadius: 50,
+        paddingVertical: 2,
+        paddingHorizontal: 10,
+        justifyContent: 'center',
+        alignItems: "center"
+      }, 
+
+      formatinput: {
+        alignItems: "center",
+        justifyContent: 'center',
+      }
 })
 
 export default LoginScreen;
