@@ -16,12 +16,12 @@ function WelcomeScreen({ navigation }) {
                 </View>
 
                 <TouchableHighlight underlayColor={'#067A6F'} style={styles.buttonstylelogin} onPress={() => navigation.navigate('loginscreen')}>
-                  <Text style={styles.welcomeText}>Login</Text>
+                  <Text style={styles.welcomeTextlogin}>Login</Text>
                 </TouchableHighlight>
 
                 <TouchableHighlight underlayColor={'#A95747'} style={styles.buttonstyleregister} onPress={() => navigation.navigate('registerscreen')}>
                   <View>
-                    <Text style={styles.welcomeText}>Register</Text>
+                    <Text style={styles.welcomeTextregister}>Register</Text>
                   </View>
                 </TouchableHighlight>
               </ImageBackground>
@@ -61,8 +61,16 @@ const styles = StyleSheet.create({
         
       },
 
-      welcomeText: {
-        fontSize: 18,
+      welcomeTextlogin: {
+        fontSize: 30,
+        color: "#fff",
+        fontWeight: "bold",
+        alignSelf: "center",
+        textTransform: "uppercase"
+      }, 
+
+      welcomeTextregister: {
+        fontSize: 16,
         color: "#fff",
         fontWeight: "bold",
         alignSelf: "center",
@@ -82,21 +90,21 @@ const styles = StyleSheet.create({
         elevation: 8,
         backgroundColor: "#009688",
         borderRadius: 50,
-        paddingVertical: 20,
-        paddingHorizontal: 20,
+        paddingVertical: 10,
+        paddingHorizontal: 10,
         justifyContent: 'center',
         alignItems: "center"
       },
 
       buttonstyleregister: {
         bottom: 30,
-        width: "40%",
-        height: 70,
+        width: "30%",
+        height: 50,
         elevation: 8,
         backgroundColor: "#D9735F",
         borderRadius: 50,
-        paddingVertical: 10,
-        paddingHorizontal: 10,
+        paddingVertical: 5,
+        paddingHorizontal: 5,
         justifyContent: 'center',
         alignItems: "center"
       }
