@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ImageBackground, TextInput, TouchableHighlight } from 'react-native';
-import {AsyncStorage} from 'react-native';
-
+import { View, Text, StyleSheet, ImageBackground, TextInput, TouchableHighlight, } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function LoginScreen(props) {
 
@@ -59,6 +58,7 @@ const styles = StyleSheet.create({
         width: 300,
         height: 40,
         borderColor: 'gray',
+        borderRadius: 8,
         borderWidth: 1,
         marginBottom: 16,
         paddingHorizontal: 8
