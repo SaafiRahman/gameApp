@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ImageBackground, TextInput, TouchableHighlight, } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -14,6 +14,22 @@ function RegisterScreen(props) {
             console.log("err")
         }
     }
+
+    const loadName = async() => {
+        try {
+            let name = await AsyncStorage.getItem("savedName");
+
+            if (name !== null) {
+                setUsername(name);
+            }
+        } catch (error) {
+            
+        }
+    }
+
+    useEffect(() => {
+        loadName();
+    }, [])
 
     return (
         <View style ={styles.container}>
@@ -32,6 +48,8 @@ function RegisterScreen(props) {
                         secureTextEntry
                         onChangeText={(val) => setPassword(val)}
                     />
+
+                    <Text>{username}</Text>
 
                     <TouchableHighlight underlayColor={'#067A6F'} style={styles.buttonstylelogin}  onPress={() => saveName}>
                         <Text style={styles.welcomeTextlogin}>Submit</Text>
