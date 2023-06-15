@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, ImageBackground, TextInput, TouchableHighlight, } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-function LoginScreen(props) {
-
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+function LoginScreen({ route }) {
+    const { logininfo } = route.params;
+    // const [username, setUsername] = useState('');
+    // const [password, setPassword] = useState('');
 
     return (
         <View style ={styles.container}>
@@ -24,6 +24,8 @@ function LoginScreen(props) {
                         secureTextEntry
                         onChangeText={(val) => setPassword(val)}
                     />
+                    <Text>{logininfo.username}</Text>
+                    <Text>{logininfo.password}</Text>
 
                     <TouchableHighlight underlayColor={'#067A6F'} style={styles.buttonstylelogin}>
                         <Text style={styles.welcomeTextlogin}>Login</Text>
