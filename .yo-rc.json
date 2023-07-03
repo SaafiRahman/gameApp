@@ -1,0 +1,63 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "keenan",
+    "blueprints": [
+      {
+        "name": "generator-jhipster-react-native",
+        "version": "4.3.0"
+      }
+    ],
+    "buildTool": "maven",
+    "cacheProvider": null,
+    "clientFramework": "react",
+    "clientTheme": "none",
+    "creationTimestamp": 1688270639763,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "devServerPort": 9060,
+    "dtoSuffix": "DTO",
+    "enableGradleEnterprise": null,
+    "enableHibernateCache": null,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": false,
+    "entities": [],
+    "entitySuffix": "",
+    "gradleEnterpriseHost": null,
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "8.0.0-beta.1",
+    "jwtSecretKey": "YzJjMzk3MzAyZGY1MGNhMDY0ZjY5NDViZWRjNzM4MTQ3NTcyNjQ1NDVhMDlhMTZhMDZjNWVkMDAyMWM1NTMxNzYwYjg5ZTQwOTRjYWJkMzk4ZGZhNzE0ODA3OTJjMTVmNTlmOTk5ODJjMGZkNWE5YTE0MjliZTUzMDU0YTI5OWM=",
+    "messageBroker": false,
+    "microfrontend": false,
+    "microfrontends": [],
+    "nativeLanguage": "en",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-react-native",
+        "version": "4.3.0"
+      }
+    ],
+    "packageFolder": "com/mycompany/myapp",
+    "packageName": "com.mycompany.myapp",
+    "pages": [],
+    "prodDatabaseType": "mysql",
+    "reactNative": {
+      "backend": "C:\\Users\\Mike5\\Desktop\\Coding Junk and Stuff\\Fun Stuff\\Saafis App\\saafisite",
+      "detox": false,
+      "reactNativeAppName": "keenan"
+    },
+    "reactive": true,
+    "searchEngine": false,
+    "serverPort": null,
+    "serverSideOptions": [],
+    "serviceDiscoveryType": false,
+    "skipCheckLengthOfIdentifier": false,
+    "skipClient": false,
+    "skipFakeData": false,
+    "skipUserManagement": false,
+    "testFrameworks": [],
+    "websocket": false,
+    "withAdminUi": true
+  }
+}
